@@ -2,8 +2,22 @@ POST http://localhost:8000/todo/create
 Content-Type: application/json
 
 {
-    "description":"Learn MySQL" 
+    "description":"Learn ML" 
 }
 
 ###
 GET http://localhost:8000/todo/all
+
+###
+GET http://localhost:8000/todo/2
+
+###
+PUT http://localhost:8000/todo/4
+Content-Type: application/json
+
+{
+    "description":"Learn Coding" 
+}
+
+###
+DELETE http://localhost:8000/todo/4
