@@ -1,0 +1,179 @@
+.text-input {
+  height: 30vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  height: 1rem;
+  width: 50%;
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 1px solid rgb(202, 199, 199);
+  outline: none;
+  font-size: 1.25rem;
+}
+
+.btn-add {
+  margin: 0.5rem;
+  margin-left: 2rem;
+  padding: 0.75rem;
+  border-radius: 1rem;
+
+  border: none;
+  background-color: rgb(189, 186, 186);
+
+  cursor: pointer;
+}
+
+.btn-search {
+  margin: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 1rem;
+
+  border: none;
+  background-color: rgb(189, 186, 186);
+
+  cursor: pointer;
+}
+
+.btn-add img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.btn-search img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.display-port {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+col1 {
+  grid-area: c1;
+}
+
+col2 {
+  grid-area: c2;
+}
+
+col3 {
+  grid-area: c3;
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.table-header {
+  width: 70vw;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "c1 c2 c3";
+
+  border: 1px solid rgb(131, 131, 131);
+  background: rgb(61, 165, 165);
+
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+
+  border-radius: 0.5rem;
+  text-align: center;
+
+  margin-bottom: 1rem;
+}
+
+.table-content1 {
+  width: 70vw;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "c1 c2 c3";
+
+  border: 1px solid rgb(233, 227, 227);
+  background: rgb(227, 238, 238);
+
+  color: rgb(80, 77, 77);
+  font-size: 1.25rem;
+  padding: 0.5rem;
+
+  border-radius: 0.5rem;
+  text-align: center;
+
+  margin-bottom: 1rem;
+}
+
+.table-content2 {
+  width: 70vw;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "c1 c2 c3";
+
+  border: 1px solid rgb(233, 227, 227);
+  background: rgb(164, 167, 167);
+
+  color: rgb(75, 67, 67);
+  font-size: 1.25rem;
+  padding: 0.5rem;
+
+  border-radius: 0.5rem;
+  text-align: center;
+
+  margin-bottom: 1rem;
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+}
+
+.delete {
+  margin-left: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 1rem;
+
+  border: none;
+  background-color: rgba(198, 31, 31, 0.76);
+  color: white;
+
+  cursor: pointer;
+}
+
+.complete {
+  margin-right: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 1rem;
+
+  border: none;
+  background-color: rgba(35, 181, 35, 0.76);
+  color: white;
+
+  cursor: pointer;
+}
