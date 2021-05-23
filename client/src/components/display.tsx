@@ -1,3 +1,5 @@
+import React from "react";
+import Actions from "./action";
 import "./style.css";
 
 export default function ShowTodo() {
@@ -13,12 +15,16 @@ export default function ShowTodo() {
         <div className="table-content1">
           <div className="col1">1</div>
           <div className="col2">Bleep</div>
-          <div className="col3">Done</div>
+          <div className="col3">
+            <Actions />
+          </div>
         </div>
         <div className="table-content2">
           <div className="col1">1</div>
           <div className="col2">Lorem</div>
-          <div className="col3">Done</div>
+          <div className="col3">
+            <Actions />
+          </div>
         </div>
       </div>
     </div>

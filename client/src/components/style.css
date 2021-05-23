@@ -141,3 +141,31 @@ col3 {
 
   margin-bottom: 1rem;
 }
+
+.action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+}
+
+.delete {
+  margin-left: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 1rem;
+
+  border: none;
+  background-color: rgba(198, 31, 31, 0.76);
+  color: white;
+}
+
+.complete {
+  margin-right: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 1rem;
+
+  border: none;
+  background-color: rgba(35, 181, 35, 0.76);
+  color: white;
+}
