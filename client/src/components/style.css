@@ -25,6 +25,8 @@
 
   border: none;
   background-color: rgb(189, 186, 186);
+
+  cursor: pointer;
 }
 
 .btn-search {
@@ -34,6 +36,8 @@
 
   border: none;
   background-color: rgb(189, 186, 186);
+
+  cursor: pointer;
 }
 
 .btn-add img {
@@ -158,6 +162,8 @@ col3 {
   border: none;
   background-color: rgba(198, 31, 31, 0.76);
   color: white;
+
+  cursor: pointer;
 }
 
 .complete {
@@ -168,4 +174,6 @@ col3 {
   border: none;
   background-color: rgba(35, 181, 35, 0.76);
   color: white;
+
+  cursor: pointer;
 }
