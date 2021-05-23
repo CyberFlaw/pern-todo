@@ -1,5 +1,4 @@
 import { useState } from "react";
-import ShowTodo from "./display";
 
 import "./style.css";
 
@@ -18,6 +17,7 @@ export default function Search() {
           type="text"
           value={value}
           onChange={handleValueChange}
+          placeholder="Enter Todo here..."
         />
         <button className="btn-add">
           <img
@@ -32,7 +32,6 @@ export default function Search() {
           />
         </button>
       </div>
-      <ShowTodo />
     </div>
   );
 }
