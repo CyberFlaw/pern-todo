@@ -1,8 +1,8 @@
-import React from "react";
 import Actions from "./action";
+
 import "./style.css";
 
-export default function ShowTodo() {
+export default function ShowTodo(props: any) {
   return (
     <div className="display-port">
       <div className="table">
@@ -12,20 +12,24 @@ export default function ShowTodo() {
           <div className="col3">Action</div>
         </div>
 
-        <div className="table-content1">
-          <div className="col1">1</div>
-          <div className="col2">Bleep</div>
-          <div className="col3">
-            <Actions />
-          </div>
-        </div>
-        <div className="table-content2">
-          <div className="col1">1</div>
-          <div className="col2">Lorem</div>
-          <div className="col3">
-            <Actions />
-          </div>
-        </div>
+        {props.todo.map(
+          (item: { t_id: number; description: string }, index: number) => {
+            return (
+              <div
+                className={
+                  index % 2 === 0 ? "table-content-1" : "table-content-2"
+                }
+                key={item.t_id}
+              >
+                <div className="col1">{index + 1}</div>
+                <div className="col2">{item.description}</div>
+                <div className="col3">
+                  <Actions todoId={item} />
+                </div>
+              </div>
+            );
+          }
+        )}
       </div>
     </div>
   );

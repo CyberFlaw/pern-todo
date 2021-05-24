@@ -1,10 +1,44 @@
-import "./style.css";
+import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
 
-export default function Actions() {
+import "./style.css";
+import "react-toastify/dist/ReactToastify.css";
+
+export default function Actions(props: any) {
+  const handleDelete = () => {
+    axios
+      .delete(`http://localhost:8000/todo/${props.todoId.t_id}`)
+      .then(() => {
+        toast("Todo Deleted Successfully!");
+      })
+      .catch(() => {
+        toast("Woops! We had encountered some Error");
+      });
+  };
+
+  const handleEdit = () => {
+    const change = prompt("Enter new value");
+    axios
+      .put(`http://localhost:8000/todo/${props.todoId.t_id}`, {
+        description: change,
+      })
+      .then(() => {
+        toast("Todo Edited Successfully!");
+      })
+      .catch(() => {
+        toast("Woops! We had encountered some Error");
+      });
+  };
+
   return (
     <div className="action">
-      <button className="complete">Completed</button>
-      <button className="delete">Delete</button>
+      <ToastContainer />
+      <button className="edit" onClick={handleEdit}>
+        Edit
+      </button>
+      <button className="delete" onClick={handleDelete}>
+        Delete
+      </button>
     </div>
   );
 }
