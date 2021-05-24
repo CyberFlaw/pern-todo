@@ -1,5 +1,4 @@
 import Actions from "./action";
-// import axios from "axios";
 
 import "./style.css";
 
@@ -25,7 +24,7 @@ export default function ShowTodo(props: any) {
                 <div className="col1">{index + 1}</div>
                 <div className="col2">{item.description}</div>
                 <div className="col3">
-                  <Actions />
+                  <Actions todoId={item} />
                 </div>
               </div>
             );

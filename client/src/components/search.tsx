@@ -13,18 +13,20 @@ export default function Search(props: any) {
   };
 
   const handleAddTodo = () => {
-    axios
-      .post("http://localhost:8000/todo/create", {
-        description: value,
-      })
-      .then((res) => {
-        // console.log(res);
-        toast("Todo Added Successfully!");
-      })
-      .catch((err) => {
-        // console.log(err);
-        toast("Woops! We had encountered some Error");
-      });
+    if (value !== "") {
+      axios
+        .post("http://localhost:8000/todo/create", {
+          description: value,
+        })
+        .then(() => {
+          toast("Todo Added Successfully!");
+        })
+        .catch(() => {
+          toast("Woops! We had encountered some Error");
+        });
+    } else {
+      toast("Please Enter a Todo");
+    }
   };
 
   return (
@@ -43,12 +45,6 @@ export default function Search(props: any) {
             alt="add"
           />
           <ToastContainer />
-        </button>
-        <button className="btn-search">
-          <img
-            src="https://img-premium.flaticon.com/png/512/598/598489.png?token=exp=1621626863~hmac=fb5224891304e370047d6bc0697e3260"
-            alt="search"
-          />
         </button>
       </div>
     </div>
