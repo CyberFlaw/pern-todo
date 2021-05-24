@@ -1,28 +1,9 @@
-import React, { useState, useEffect } from "react";
 import Actions from "./action";
-import axios from "axios";
+// import axios from "axios";
 
 import "./style.css";
 
-export default function ShowTodo() {
-  interface Todo {
-    t_id: number;
-    description: string;
-  }
-
-  const [todos, setTodos] = useState<Todo[]>([]);
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:8000/todo/all")
-      .then((res) => {
-        setTodos(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
+export default function ShowTodo(props: any) {
   return (
     <div className="display-port">
       <div className="table">
@@ -32,22 +13,24 @@ export default function ShowTodo() {
           <div className="col3">Action</div>
         </div>
 
-        {todos.map((item) => {
-          return (
-            <div
-              className={
-                item.t_id % 2 === 0 ? "table-content-1" : "table-content-2"
-              }
-              key={item.t_id}
-            >
-              <div className="col1">{item.t_id}</div>
-              <div className="col2">{item.description}</div>
-              <div className="col3">
-                <Actions />
+        {props.todo.map(
+          (item: { t_id: number; description: string }, index: number) => {
+            return (
+              <div
+                className={
+                  index % 2 === 0 ? "table-content-1" : "table-content-2"
+                }
+                key={item.t_id}
+              >
+                <div className="col1">{index + 1}</div>
+                <div className="col2">{item.description}</div>
+                <div className="col3">
+                  <Actions />
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          }
+        )}
       </div>
     </div>
   );
